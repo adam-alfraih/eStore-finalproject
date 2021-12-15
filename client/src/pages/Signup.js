@@ -35,7 +35,7 @@ export default function Signup() {
 		<div>
 			<h1>Signup</h1>
 			<form onSubmit={handleSubmit}>
-				<label>Email: </label>
+				<label>Email: </label>``
 				<input type="text" name="email" value={email} onChange={handleEmail} />
 				<label>Password: </label>
 				<input type="password" value={password} onChange={handlePassword} />

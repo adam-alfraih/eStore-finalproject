@@ -34,7 +34,7 @@ const Navbar = ({ totalItems }) => {
                             </Button>
 
 
-                        <IconButton component={Link} to="/signup" aria-label="Show cart items" color="inherit">
+                        <IconButton component={Link} to="/profile" aria-label="Show cart items" color="inherit">
                                 <Face />                          
                         </IconButton>
 
