@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { commerce } from './lib/commerce';
 import { Routes, Route } from 'react-router-dom'
-// import Products from './components/Products/Products'
-// import Navbar from './components/Navbar/Navbar'
-// INSTEAD OF DOING THIS etc.. 👆 I did this 👇     the master file for this is in components/index.js
-import { Products, Navbar, Cart, Checkout } from './Components'
+import { Products, Navbar, Cart, Checkout, Profile } from './Components'
 
 import Signup from './pages/Signup'
 import Login from './pages/Login'
@@ -83,6 +80,8 @@ const App = () => {
                 <Route path='/signup' element={<Signup />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/checkout' element={<Checkout />} />
+                <Route path='/profile' element={<Profile />} />
+
             </Routes>
 
         </div>

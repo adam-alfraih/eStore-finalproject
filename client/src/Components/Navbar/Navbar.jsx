@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography, Button } from '@material-ui/core'
-import { ShoppingCart, FaceIcon } from '@material-ui/icons'
+import { ShoppingCart, Face } from '@material-ui/icons'
+
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/commerce.png'
@@ -32,14 +33,19 @@ const Navbar = ({ totalItems }) => {
                             Log Out
                             </Button>
 
-                        <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
 
+                        <IconButton component={Link} to="/signup" aria-label="Show cart items" color="inherit">
+                                <Face />                          
+                        </IconButton>
+
+                        <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
                             <Badge badgeContent={totalItems} color="secondary">
                                 {/* imported icon material-ui */}
                                 <ShoppingCart />
-
                             </Badge>
                         </IconButton>
+
+
                         </>
                         ) :  
                         <>
@@ -53,13 +59,7 @@ const Navbar = ({ totalItems }) => {
                                 <ShoppingCart />
                             </Badge>
                         </IconButton>
-
-                        <IconButton component={Link} to="/signup" aria-label="Show cart items" color="inherit">
-                            <Badge badgeContent={0} color="secondary">
-                                {/* imported icon material-ui */}
-                                <ShoppingCart />
-                            </Badge>
-                        </IconButton>
+                       
                         </>
                         }
                         
