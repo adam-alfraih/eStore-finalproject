@@ -25,6 +25,13 @@ const auth = require("./routes/auth");
 app.use("/auth", auth);
 
 
+// cloudinary
+ 
+const profile = require('./routes/profile'); // <== has to be added
+app.use('/', isAuthenticated, profile); // <== has to be added
+
+// end of cloudinary
+
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
