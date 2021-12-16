@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { TextField, Container, Typography, Button, Grid, Paper } from '@material-ui/core'
+
+import useStyles from './styles';
+
 
 export default function Signup() {
+	const classes = useStyles();
 
 	const [email, setEmail] = useState('')
 	const [name, setName] = useState('')
@@ -20,10 +25,10 @@ export default function Signup() {
 		const requestBody = { email, password, name }
 
 		axios.post('/auth/signup', requestBody)
-		.then(response => {
-			console.log('hello')
-			// redirect -> login 
-			// navigate('/login')
+			.then(response => {
+				console.log('hello')
+				// redirect -> login 
+				// navigate('/login')
 			})
 			.catch(err => {
 				const errorDescrition = err.response.data.message
@@ -33,22 +38,50 @@ export default function Signup() {
 
 	return (
 		<div>
-			<h1>Signup</h1>
-			<form onSubmit={handleSubmit}>
-				<label>Email: </label>
-				<input type="text" name="email" value={email} onChange={handleEmail} />
-				<label>Password: </label>
-				<input type="password" value={password} onChange={handlePassword} />
-				<label>Name: </label>
-				<input type="text" value={name} onChange={handleName} />
+			<div className={classes.toolbar} />
+			<main className={classes.layout}>
+				<Paper className={classes.paper}>
+					<Container>
+						<div className={classes.toolbar} />
+						<Typography className={classes.title} variant="h3" gutterBottom align="center">Sign Up</Typography>
+						<form onSubmit={handleSubmit}>
+							<Container className={classes.login}>
+								{/* <label>Email: </label> */}
+								<TextField id="outlined-basic" label="Email" variant="outlined" type="text" name="email" value={email} onChange={handleEmail} />
+								</Container>
+								<br></br>
 
-				<button type="submit">Sign Up</button>
-			</form>
+								<Container className={classes.login}>
+								{/* <label>Password: </label> */}
+								<TextField id="outlined-basic" label="Password" variant="outlined" type="password" value={password} onChange={handlePassword} />
+								</Container>
+								<br></br>
+								{/* <label>Name: </label> */}
 
-			{errorMessage && <p>{errorMessage}</p>}
+								<Container className={classes.login}>
+								<TextField id="outlined-basic" label="Password" variant="outlined" type="text" value={name} onChange={handleName} />
+								</Container>
+								<br></br>
 
-			<p>Already have an account?</p>
-			<Link to='/login'>Login</Link>
-		</div>
-	)
+								<Container className={classes.login}>
+								<Button type="submit" variant="contained" color="primary" size="large">Sign Up</Button>
+								</Container>
+						</form>
+
+						{errorMessage && <p>{errorMessage}</p>}
+
+						<br></br>
+						<br></br>
+						<br></br>
+						<p>Already have an account?</p>
+						<br></br>
+
+						<Button component={Link} to="/login" type="submit" variant="outlined" color="primary" size="large">Login
+						</Button>
+
+					</Container>
+					</Paper>
+					</main>
+					</div>
+					)
 }
