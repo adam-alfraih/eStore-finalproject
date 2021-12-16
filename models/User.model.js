@@ -20,7 +20,10 @@ const userSchema = new Schema(
       type: String,
     },
     wishlist: [
-      String,
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Wishlist'
+      }
     ]
   });
 

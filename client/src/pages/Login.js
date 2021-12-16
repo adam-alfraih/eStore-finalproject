@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { AuthContext } from '../context/auth'
-import { TextField, Container, Typography, Button, Grid } from '@material-ui/core'
+import { TextField, Container, Typography, Button, Grid, Paper } from '@material-ui/core'
 
 import useStyles from './styles';
 
@@ -42,23 +42,46 @@ export default function Login() {
 
 	return (
 		<div>
-		<Container>
-            <div className={classes.toolbar} />
-			<Typography className={classes.title} variant="h3" gutterBottom>Log In</Typography>
-			<form onSubmit={handleSubmit}>
-				<label>Email: </label>
-				<input type="text" name="email" value={email} onChange={handleEmail} />
-				<label>Password: </label>
-				<input type="password" value={password} onChange={handlePassword} />
+			<div className={classes.toolbar} />
+			<main className={classes.layout}>
+				<Paper className={classes.paper}>
+					<Container>
+						<div className={classes.toolbar} />
+						<Typography className={classes.title} variant="h3" gutterBottom align="center">Log In</Typography>
+						<form onSubmit={handleSubmit}>
+							<Container className={classes.login}>
+								{/* <label>Email: </label> */}
+								<TextField id="outlined-basic" label="Email" variant="outlined" type="text" name="email" value={email} onChange={handleEmail} />
+							</Container>
+							<br></br>
 
-				<button type="submit">Log in</button>
-			</form>
+							<Container className={classes.login}>
+								<TextField id="outlined-basic" label="Password" variant="outlined" type="password" value={password} onChange={handlePassword} />
+							</Container>
 
-			{errorMessage && <p>{errorMessage}</p>}
+							<br></br>
+							<Container className={classes.login}>
+								<Button type="submit" variant="contained" color="primary" size="large">Log in</Button>
+							</Container>
+						</form>
+						<Container className={classes.login}>
+							{errorMessage && <Typography variant="h6" align="center">{errorMessage}</Typography>}
+						</Container>
+						<br></br>
+						<br></br>
+						<br></br>
+						<Typography variant="h6" align="center">Don't have an account?</Typography>
+						<br></br>
 
-			<p>Don't have an account?</p>
-			<Link to='/signup'>Signup</Link>
-		</Container>
+						<Container className={classes.login}>
+							<Button component={Link} to="/signup" type="submit" variant="outlined" color="primary" size="large">
+								Signup
+							</Button>
+						</Container>
+
+					</Container>
+				</Paper>
+			</main>
 		</div>
 	)
 }
