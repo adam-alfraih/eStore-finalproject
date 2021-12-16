@@ -18,7 +18,10 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-    }
+    },
+    wishlist: [
+      String,
+    ]
   });
 
 const User = model("User", userSchema);
