@@ -32,7 +32,7 @@ app.use('/', isAuthenticated, profile); // <== has to be added
 
 // end of cloudinary
 
-// app.js
+// HEROKU APP
 const path = require('path');
 app.use(express.static(path.join(__dirname, "/client/build")));
 app.use((req, res) => {
