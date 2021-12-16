@@ -21,4 +21,17 @@ export default makeStyles(() => ({
     // border: '3px solid gold',
     // backgroundColor: '#ff0000',
   },
+  image: {
+    width: '10px',
+  },
+  center: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
+    marginLeft: '25px',
+    marginTop: '5px',
+  },
+  
 }));

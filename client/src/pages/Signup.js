@@ -59,7 +59,7 @@ export default function Signup() {
 								{/* <label>Name: </label> */}
 
 								<Container className={classes.login}>
-								<TextField id="outlined-basic" label="Password" variant="outlined" type="text" value={name} onChange={handleName} />
+								<TextField id="outlined-basic" label="Name" variant="outlined" type="text" value={name} onChange={handleName} />
 								</Container>
 								<br></br>
 
@@ -68,16 +68,18 @@ export default function Signup() {
 								</Container>
 						</form>
 
-						{errorMessage && <p>{errorMessage}</p>}
+						{errorMessage && <Typography variant="h6" align="center">{errorMessage}</Typography>}
 
 						<br></br>
 						<br></br>
 						<br></br>
-						<p>Already have an account?</p>
+						<Typography variant="h6" align="center">Already have an account?</Typography>
 						<br></br>
 
+						<Container className={classes.login}>
 						<Button component={Link} to="/login" type="submit" variant="outlined" color="primary" size="large">Login
 						</Button>
+						</Container>
 
 					</Container>
 					</Paper>
