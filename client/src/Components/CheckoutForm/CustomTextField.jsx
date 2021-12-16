@@ -18,7 +18,8 @@ function FormInput({ name, label, required }) {
                 <TextField
                     hiddenLabel
                     fullWidth
-                    label={label} 
+                    label
+                    // label={label} 
                     required
                     variant="outlined"
                 />

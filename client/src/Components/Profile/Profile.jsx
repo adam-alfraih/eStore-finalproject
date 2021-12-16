@@ -160,11 +160,13 @@ const Profile = () => {
                                             {item.wishlistItem}
                                         </Typography>
                                     </Container>
+                                    <Container className={classes.removeButton}>
                                     <Button type="submit" variant="outlined" color="secondary" onClick={e => {
                                         deleteWishListItem(item._id)
                                     }}>
                                         Remove
                                     </Button>
+                                    </Container>
                                 </form>
                             </div>
                         </CardContent>
