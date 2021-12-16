@@ -11,7 +11,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
 
     const EmptyCart = () => (
         <Typography variant="subtitle1">
-            You have no items in your shopping cart.
+            ...You have no items in your shopping cart.
             <Link to ="/store" className={classes.link}> Lets add some now</Link>!
         </Typography>
     );
@@ -45,7 +45,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     return (
         <Container>
             <div className={classes.toolbar} />
-            <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
+            <Typography className={classes.title} variant="h2" gutterBottom>Your Shopping Cart</Typography>
             {  !cart.line_items.length ? <EmptyCart /> : <FilledCart />}
         </Container>
     )

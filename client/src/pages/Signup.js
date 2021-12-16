@@ -43,7 +43,7 @@ export default function Signup() {
 				<Paper className={classes.paper}>
 					<Container>
 						<div className={classes.toolbar} />
-						<Typography className={classes.title} variant="h3" gutterBottom align="center">Sign Up</Typography>
+						<Typography className={classes.title} variant="h2" gutterBottom align="center">Sign Up</Typography>
 						<form onSubmit={handleSubmit}>
 							<Container className={classes.login}>
 								{/* <label>Email: </label> */}
@@ -68,12 +68,12 @@ export default function Signup() {
 								</Container>
 						</form>
 
-						{errorMessage && <Typography variant="h6" align="center">{errorMessage}</Typography>}
+						{errorMessage && <Typography  align="center">{errorMessage}</Typography>}
 
 						<br></br>
 						<br></br>
 						<br></br>
-						<Typography variant="h6" align="center">Already have an account?</Typography>
+						<Typography align="center">Already have an account?</Typography>
 						<br></br>
 
 						<Container className={classes.login}>

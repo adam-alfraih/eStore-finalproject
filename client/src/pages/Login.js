@@ -47,7 +47,7 @@ export default function Login() {
 				<Paper className={classes.paper}>
 					<Container>
 						<div className={classes.toolbar} />
-						<Typography className={classes.title} variant="h3" gutterBottom align="center">Log In</Typography>
+						<Typography className={classes.title} variant="h2" gutterBottom align="center">Log In</Typography>
 						<form onSubmit={handleSubmit}>
 							<Container className={classes.login}>
 								{/* <label>Email: </label> */}
@@ -65,12 +65,12 @@ export default function Login() {
 							</Container>
 						</form>
 						<Container className={classes.login}>
-							{errorMessage && <Typography variant="h6" align="center">{errorMessage}</Typography>}
+							{errorMessage && <Typography align="center">{errorMessage}</Typography>}
 						</Container>
 						<br></br>
 						<br></br>
 						<br></br>
-						<Typography variant="h6" align="center">Don't have an account?</Typography>
+						<Typography align="center">Don't have an account?</Typography>
 						<br></br>
 
 						<Container className={classes.login}>

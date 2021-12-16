@@ -4,7 +4,7 @@ import { ShoppingCart, Face } from '@material-ui/icons'
 
 import { Link } from 'react-router-dom'
 
-import logo from '../../assets/commerce.png'
+import logo from '../../assets/circle.png'
 import useStyles from './styles';
 
 import { useContext } from 'react'
@@ -17,9 +17,11 @@ const Navbar = ({ totalItems }) => {
         <>
             <AppBar position="fixed" className={classes.appBar} color="inherit">
                 <Toolbar>
+                    <Link to={'/'}>
+                        <img src={logo} alt="circle.png" height="25px" className={classes.image} />
+                     </Link>
                     <Typography component={Link} to="/store" variant="h6" className={classes.title} color="inherit">
-                        <img src={logo} alt="commerce.png" height="25px" className={classes.image} />
-                        eStore.js
+                        eStore
                     </Typography>
                     <div className={classes.grow} />
                     <div className={classes.button}>
