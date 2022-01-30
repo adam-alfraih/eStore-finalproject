@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { AuthContext } from '../context/auth'
-import { TextField, Container, Typography, Button, Grid, Paper } from '@material-ui/core'
+import { TextField, Container, Typography, Button, Grid, Paper, CssBaseline } from '@material-ui/core'
 
 import useStyles from './styles';
 
@@ -41,6 +41,8 @@ export default function Login() {
 	}
 
 	return (
+		<>
+		<CssBaseline />
 		<div>
 			<div className={classes.toolbar} />
 			<main className={classes.layout}>
@@ -83,5 +85,6 @@ export default function Login() {
 				</Paper>
 			</main>
 		</div>
+		</>
 	)
 }
