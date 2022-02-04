@@ -45,7 +45,7 @@ npm install
 ```Console
 npm start
 ```
-use npm start on the client **and** the server**.
+use npm start on the client **and** the server.
 
 ## Screenshots
 
