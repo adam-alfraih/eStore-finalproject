@@ -41,11 +41,11 @@ A React based web application that mimics an E-commerce web store using an API.
 npm install
 ```
 
-use 
+ 
 ```Console
 npm start
 ```
-On the client, and then **once again to start the server**.
+use npm start on the client **and** the server**.
 
 ## Screenshots
 
