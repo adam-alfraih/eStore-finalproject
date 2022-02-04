@@ -1,4 +1,4 @@
-<!-- # E-commerce web store
+# E-commerce web store
 
 'eStore' is the final project I've created during an intensive 3-month bootcamp at Ironhack.
 
@@ -44,4 +44,4 @@ On the client, and then **once again to start the server**.
 
 ## Screenshots
 
-**coming soon** -->
+**coming soon** 
