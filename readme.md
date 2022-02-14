@@ -37,6 +37,9 @@ A React based web application that mimics an E-commerce web store using an API.
 
 ## Getting Started
 
+-   This project has a server (root dir) and a client (client dir). 
+-   For local dev, run these commands in each of them.
+
 ```Console
 npm install
 ```
@@ -45,7 +48,6 @@ npm install
 ```Console
 npm start
 ```
-use npm start on the client **and** the server.
 
 ## Screenshots
 
