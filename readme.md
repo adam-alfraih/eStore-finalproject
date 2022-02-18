@@ -30,6 +30,7 @@ A React based web application that mimics an E-commerce web store using an API.
 -   Mongoose
 -   Express
 -   JWT
+-   bcrypt.js
 -   Cloudinary
 -   Axios
 -   MUI
