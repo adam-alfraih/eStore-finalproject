@@ -50,6 +50,8 @@ npm install
 npm start
 ```
 
+Alternatively, you can view the <a href="https://e-store-finalproject-juei4wdch-adam-alfraih.vercel.app/">deployed project</a>
+
 ## Screenshots
 
 
